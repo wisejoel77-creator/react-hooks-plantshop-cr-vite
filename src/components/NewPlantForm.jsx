@@ -11,7 +11,7 @@ function NewPlantForm({ onPlantAdded }) {
     const newPlant = {
       name,
       image,
-      price: parseFloat(price),
+      price:(price),
     };
   
 
