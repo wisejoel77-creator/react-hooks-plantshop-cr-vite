@@ -1,7 +1,8 @@
+
 import React, { useState } from "react";
 
 function PlantCard({ plant }) {
-  const [isSoldOut, setisSoldOut] = useState(plant?.soldOut ?? false);
+const isSoldOut = plant.soldOut;
 
 function handleSoldOut() {
   setisSoldOut(!isSoldOut );
@@ -14,7 +15,7 @@ function handleSoldOut() {
       ${Number(plant.price ?? 0).toFixed(2)}
       
         <button className="primary" onClick={handleSoldOut}>
-          {isSoldOut ? "Sold Out" : "In Stock"}
+          {isSoldOut ? "Out of Stock" : "In Stock"}
           </button>
           {isSoldOut && <p className="sold-out">SOLD OUT</p>}     
 
